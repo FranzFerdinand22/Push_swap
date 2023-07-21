@@ -24,9 +24,12 @@ typedef struct _stack {
 #include <unistd.h>
 #include <stdlib.h>
 #include <stdio.h>
+//ft_pritf
 
-//main
+//main + utils
 int main(int argc, char **argv);
+int     ft_strcmp(const char *s1, const char *s2);
+void    error(char *str);
 
 //make stack
 t_stack *stdin_to_stack(int argc, char **argv);
