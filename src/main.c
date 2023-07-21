@@ -15,7 +15,10 @@
 int main(int argc, char **argv)
 {
     t_stack *stack_A;
-    
+
 
     stack_A = stdin_to_stack(argc, argv);
+    print_stack(stack_A);
+
+    return (0);
 }

@@ -34,8 +34,11 @@ void    error(char *str)
 {
     if (ft_strcmp(str, "stdin") == 0)
         write(1, "Error: Wrong input\n", 20);
-    else if (ft_strcmp(str, "stdin") == 0)
+    else if (ft_strcmp(str, "badnum") == 0)
+    {
         write(1, "Error: Wrong number\n", 21);
+        exit(1);
+    }
 }
 
 void free_arr(char **arr)
