@@ -25,9 +25,12 @@ typedef struct _stack {
 #include <stdlib.h>
 #include <stdio.h>
 
+//main
 int main(int argc, char **argv);
-t_stack *stdin_to_stack(int argc, char **argv);
 
+//make stack
+t_stack *stdin_to_stack(int argc, char **argv);
+int ft_atoi_ps(const char *str);
 
 
 
