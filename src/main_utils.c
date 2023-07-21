@@ -33,7 +33,22 @@ int     ft_strcmp(const char *s1, const char *s2)
 void    error(char *str)
 {
     if (ft_strcmp(str, "stdin") == 0)
-        write(1, "Error: Wrong input\n", 21);
+        write(1, "Error: Wrong input\n", 20);
     else if (ft_strcmp(str, "stdin") == 0)
-        write(1, "Error: Wrong number\n", 22);
+        write(1, "Error: Wrong number\n", 21);
+}
+
+void free_arr(char **arr)
+{
+    if (!arr)
+        return;
+
+    char **ptr = arr;
+    while (*ptr != NULL)
+    {
+        free(*ptr);
+        *ptr = NULL;
+        ptr++;
+    }
+    free(arr);
 }

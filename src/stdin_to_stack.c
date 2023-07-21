@@ -81,7 +81,7 @@ t_stack *stdin_to_stack(int argc, char **argv)
         while (i < argc)
         {
             j = ft_atoi_ps(argv[i]);
-            node_to_stac(&stack_A, new_node(j));
+            node_to_stack(&stack_A, new_node(j));
             i++;
         }
     }

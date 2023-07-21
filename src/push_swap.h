@@ -24,6 +24,7 @@ typedef struct _stack {
 #include <unistd.h>
 #include <stdlib.h>
 #include <stdio.h>
+
 //ft_pritf
 
 //main + utils
@@ -31,10 +32,23 @@ int main(int argc, char **argv);
 int     ft_strcmp(const char *s1, const char *s2);
 void    error(char *str);
 
-//make stack
+//stdin to stack
 t_stack *stdin_to_stack(int argc, char **argv);
 int ft_atoi_ps(const char *str);
 
+//stack utils
+t_stack *new_node(int num);
+t_stack *last_node(t_stack *stack);
+t_stack *node_to_stack(t_stack **stack, t_stack *node);
+void print_stack(t_stack *stack);
+void free_arr(char **arr);
 
+//split
+char	**ft_split(char const *s, char c);
+char	**ft_mysplit(char **split, char const *s, char c);
+int     wordcount(char const *s, char c);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+size_t	ft_strlen(const char *s);
+char	*ft_strdup(const char *s);
 
 #endif
