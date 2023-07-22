@@ -24,6 +24,7 @@ typedef struct _stack {
 #include <unistd.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include <limits.h>
 
 //ft_pritf
 

@@ -32,11 +32,13 @@ int ft_atoi_ps(const char *str)
     {
         if (*str < '0' || *str > '9')
             error("badnum");
+
+        if (res > (INT_MAX - (*str - '0')) / 10)
+            error("badnum");
+
         res = res * 10 + (*str - '0');
         str++;
     }
-    if ((res * minus) > 2147483647 || (res * minus) < -2147483648)
-		error("badnum");
     return (res * minus);
 }
 
