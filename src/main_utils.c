@@ -10,17 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
-
-/*int ft_strlen(char *str)
-{
-    int i;
-
-    i = 0;
-    while (*(str++))
-        i++;
-    return (i);
-}*/       
+#include "push_swap.h"      
 
 int     ft_strcmp(const char *s1, const char *s2)
 {
@@ -39,6 +29,11 @@ void    error(char *str)
         write(1, "Error: Wrong number\n", 21);
         exit(1);
     }
+    else if (ft_strcmp(str, "empty or dup") == 0)
+    {
+        write(1, "Error: Duplicate number or empty stack\n", 40);
+        exit(1);
+    }
 }
 
 void free_arr(char **arr)
@@ -54,4 +49,37 @@ void free_arr(char **arr)
         ptr++;
     }
     free(arr);
+}
+
+int check_dup(t_stack *stack_A)
+{
+    t_stack *tmp;
+
+    while (stack_A != NULL)
+    {
+        tmp = stack_A->next;
+        while (tmp != NULL)
+        {
+            if (tmp->num == stack_A->num)
+                return (1);
+            tmp = tmp->next;
+        }
+        stack_A = stack_A->next;
+    }
+    return (0);
+}
+
+void free_stack(t_stack **nodes)
+{
+    t_stack *next_node;
+
+    if (!nodes)
+        return ;
+    while (*nodes)
+    {
+        next_node = (*nodes)->next;
+        (*nodes)->num = 0;
+        free(*nodes);
+        (*nodes) = next_node;
+    }
 }
