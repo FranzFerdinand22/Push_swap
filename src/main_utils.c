@@ -10,17 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
-
-/*int ft_strlen(char *str)
-{
-    int i;
-
-    i = 0;
-    while (*(str++))
-        i++;
-    return (i);
-}*/       
+#include "push_swap.h"     
 
 int     ft_strcmp(const char *s1, const char *s2)
 {
