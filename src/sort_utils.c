@@ -1,31 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   sort_utils.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fptacek <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/21 15:19:06 by fptacek           #+#    #+#             */
-/*   Updated: 2023/07/21 15:19:09 by fptacek          ###   ########.fr       */
+/*   Created: 2023/07/23 14:28:52 by fptacek           #+#    #+#             */
+/*   Updated: 2023/07/23 14:28:54 by fptacek          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int main(int argc, char **argv)
+int stack_size(t_stack *stack)
 {
-    t_stack *stack_A;
+    int i;
 
-    stack_A = stdin_to_stack(argc, argv);
-    print_stack(stack_A);
-    if (!stack_A || check_dup(stack_A) == 1)
+    i = 0;
+    while (stack)
     {
-        free_stack(&stack_A);
-        error("empty or dup");
+        i++;
+        stack = stack->next;
     }
-    if (check_sorted(stack_A) != 1)
-        sort(&stack_A);
+    return (i);
+}
 
-
-    return (0);
+void print_indexs(t_stack *stack)
+{
+    while (stack != NULL)
+    {
+        printf(" %d\n", stack->index);
+        stack = stack->next;
+    }
 }

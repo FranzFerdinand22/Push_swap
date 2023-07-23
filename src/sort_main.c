@@ -1,31 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   sort_main.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fptacek <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/21 15:19:06 by fptacek           #+#    #+#             */
-/*   Updated: 2023/07/21 15:19:09 by fptacek          ###   ########.fr       */
+/*   Created: 2023/07/23 13:45:11 by fptacek           #+#    #+#             */
+/*   Updated: 2023/07/23 13:45:12 by fptacek          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int main(int argc, char **argv)
+void sort(t_stack **stack_A)
 {
-    t_stack *stack_A;
+    t_stack *stack_B;
+    int len;;
 
-    stack_A = stdin_to_stack(argc, argv);
-    print_stack(stack_A);
-    if (!stack_A || check_dup(stack_A) == 1)
-    {
-        free_stack(&stack_A);
-        error("empty or dup");
-    }
-    if (check_sorted(stack_A) != 1)
-        sort(&stack_A);
+    stack_B = NULL;
+    len = stack_size(*stack_A);
+    /*if (stack_size(*stack_A) == 2)
+        sa(stack_A, 0);*/
 
+    index_nbrs(*stack_A);
+    printf("Index:\n");
+    print_indexs(*stack_A);
 
-    return (0);
 }

@@ -45,6 +45,7 @@ t_stack *last_node(t_stack *stack);
 t_stack *node_to_stack(t_stack **stack, t_stack *node);
 void print_stack(t_stack *stack);
 void free_arr(char **arr);
+int check_sorted(t_stack *stack);
 
 //split
 char	**ft_split(char const *s, char c);
@@ -53,5 +54,15 @@ int     wordcount(char const *s, char c);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 size_t	ft_strlen(const char *s);
 char	*ft_strdup(const char *s);
+
+// sort
+int stack_size(t_stack *stack);
+void index_nbrs(t_stack *stack_A);
+int *make_arr(t_stack *stack);
+void index_nbrs(t_stack *stack_A);
+void sort(t_stack **stack_A);
+void print_indexs(t_stack *stack);
+void merge_sort(int arr[], int size);
+void merge(int L[], int R[], int arr[], int nL, int nR);
 
 #endif
