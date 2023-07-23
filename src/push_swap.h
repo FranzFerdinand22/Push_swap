@@ -24,6 +24,7 @@ typedef struct _stack {
 #include <unistd.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include <limits.h>
 
 //ft_pritf
 
@@ -31,6 +32,8 @@ typedef struct _stack {
 int main(int argc, char **argv);
 int     ft_strcmp(const char *s1, const char *s2);
 void    error(char *str);
+int check_dup(t_stack *stack_A);
+void free_stack(t_stack **nodes);
 
 //stdin to stack
 t_stack *stdin_to_stack(int argc, char **argv);
