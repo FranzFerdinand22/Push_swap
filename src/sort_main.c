@@ -19,8 +19,8 @@ void sort(t_stack **stack_A)
 
     stack_B = NULL;
     len = stack_size(*stack_A);
-    /*if (stack_size(*stack_A) == 2)
-        sa(stack_A, 0);*/
+    if (stack_size(*stack_A) == 2)
+        sa(stack_A, 0);
 
     index_nbrs(*stack_A);
     printf("Index:\n");

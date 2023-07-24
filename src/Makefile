@@ -8,7 +8,7 @@ RM = rm -rf
 HEADER = push_swap.h
 
 # main
-SRC_M = main.c main_utils.c stdin_to_stack.c stack_utils.c index_nbrs.c sort_utils.c sort_main.c
+SRC_M = main.c main_utils.c stdin_to_stack.c stack_utils.c index_nbrs.c sort_utils.c sort_main.c operations_a.c operations_b.c operations_ab.c
 OBJ_M = $(SRC_M:.c=.o)
 
 # libft
