@@ -53,7 +53,7 @@ void    rb(t_stack **stack_B, int i)
     tmp = *stack_B;
     if (!stack_B || !(*stack_B)->next)
         return ;
-    *stack_B = last_node(stack_B);
+    *stack_B = last_node(*stack_B);
     (*stack_B)->next = tmp;
     *stack_B = tmp->next;
     tmp->next = NULL;

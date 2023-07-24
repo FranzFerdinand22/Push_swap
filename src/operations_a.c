@@ -53,7 +53,7 @@ void    ra(t_stack **stack_A, int i)
     tmp = *stack_A;
     if (!stack_A || !(*stack_A)->next)
         return ;
-    (*stack_A) = last_node(stack_A);
+    (*stack_A) = last_node(*stack_A);
     (*stack_A)->next = tmp;
     *stack_A = tmp->next;
     tmp->next = NULL;
