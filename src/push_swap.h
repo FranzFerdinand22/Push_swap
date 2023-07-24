@@ -64,6 +64,7 @@ void    sort(t_stack **stack_A);
 void    print_indexs(t_stack *stack);
 void    merge_sort(int arr[], int size);
 void    merge(int L[], int R[], int arr[], int nL, int nR);
+void    radix_sort(t_stack **stack_A, t_stack **stack_B);
 
 // operations a
 void    pa(t_stack **stack_A, t_stack **stack_B, int i);
