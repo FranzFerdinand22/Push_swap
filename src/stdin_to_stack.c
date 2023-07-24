@@ -42,7 +42,7 @@ int ft_atoi_ps(const char *str)
     return (res * minus);
 }
 
-//split string to single input->return stack
+//split string to single input -> return stack
 t_stack *single_input(char **argv)
 {
     t_stack *stack_A;
@@ -64,7 +64,7 @@ t_stack *single_input(char **argv)
     return (stack_A);
 }
 
-//check the input->make stack from input->returns stack
+//check the input -> make stack from input -> returns stack
 t_stack *stdin_to_stack(int argc, char **argv)
 {
     t_stack *stack_A;

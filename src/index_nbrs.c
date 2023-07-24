@@ -12,6 +12,7 @@
 
 #include "push_swap.h"
 
+// merging two subarrays L and R into a single sorted array
 void merge(int L[], int R[], int arr[], int nL, int nR)
 {
     int i;
@@ -36,6 +37,7 @@ void merge(int L[], int R[], int arr[], int nL, int nR)
         arr[k++] = R[j++];
 }
 
+// divides the array into two halves -> recursively sorts them 
 void merge_sort(int arr[], int size)
 {
     if (size < 2)
@@ -63,6 +65,7 @@ void merge_sort(int arr[], int size)
     merge(left_arr, right_arr, arr, mid, size - mid);
 }
 
+// Binary Search -> find the index of a given target element in a sorted array
 int binary_Indices(int arr[], int l, int r, int num) 
 {
     int m;
@@ -80,6 +83,7 @@ int binary_Indices(int arr[], int l, int r, int num)
     return -1;
 }
 
+// making array form stack
 int *make_arr(t_stack *stack)
 {
     int len;
@@ -100,6 +104,7 @@ int *make_arr(t_stack *stack)
     return (arr);
 }
 
+// assigns the indices to the elements in the stack
 void index_nbrs(t_stack *stack_A)
 {
     int i;

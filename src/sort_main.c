@@ -12,10 +12,11 @@
 
 #include "push_swap.h"
 
+// take stack A -> make indexes -> sort indexes with radix
 void sort(t_stack **stack_A)
 {
     t_stack *stack_B;
-    int len;;
+    int len;
 
     stack_B = NULL;
     len = stack_size(*stack_A);
