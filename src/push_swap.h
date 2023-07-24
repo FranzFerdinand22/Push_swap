@@ -65,6 +65,7 @@ void    print_indexs(t_stack *stack);
 void    merge_sort(int arr[], int size);
 void    merge(int L[], int R[], int arr[], int nL, int nR);
 void    radix_sort(t_stack **stack_A, t_stack **stack_B);
+void    bitwise_part(t_stack **stack_A, t_stack **stack_B, int max_bits);
 
 // operations a
 void    pa(t_stack **stack_A, t_stack **stack_B, int i);

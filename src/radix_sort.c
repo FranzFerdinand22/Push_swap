@@ -12,30 +12,46 @@
 
 #include "push_swap.h"
 
-void radix_sort(t_stack **stack_A, t_stack **stack_B)
+void bitwise_part(t_stack **stack_A, t_stack **stack_B, int max_bits)
 {
-    int size = stack_size(*stack_A);
-    int max_num = size - 1;
-    int max_bits = 0;
-
-    while ((max_num >> max_bits) != 0)
-        max_bits++;
-
-    for (int i = 0; i < max_bits; ++i)
+    int i;
+    int j;
+    int current_size;
+    int num;
+    
+    i = 0;
+    j = 0;
+    while (i < max_bits)
     {
-        int current_size = stack_size(*stack_A);
-
-        for (int j = 0; j < current_size; ++j)
+        j = 0;
+        current_size = stack_size(*stack_A);
+        while (j < current_size)
         {
-            int num = (*stack_A)->index;
-
+            num = (*stack_A)->index;
             if ((num >> i) & 1 == 1)
                 ra(stack_A, 0);
             else
                 pb(stack_A, stack_B, 0);
+            j++;
         }
-
         while (*stack_B != NULL)
             pa(stack_A, stack_B, 0);
+        i++;
     }
+}
+
+void radix_sort(t_stack **stack_A, t_stack **stack_B)
+{
+    int size;
+    int max_num;
+    int max_bits;
+    int current_size;
+    int num;
+
+    size = stack_size(*stack_A);
+    max_num = size - 1;
+    max_bits = 0;
+    while ((max_num >> max_bits) != 0)
+        max_bits++;
+    bitwise_part(stack_A, stack_B, max_bits);
 }
