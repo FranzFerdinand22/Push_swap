@@ -65,7 +65,7 @@ void merge_sort(int arr[], int size)
     merge(left_arr, right_arr, arr, mid, size - mid);
 }
 
-// Binary Search -> find the index of a given target element in a sorted array
+// Binary Search -> find the index of element in a sorted array
 int binary_Indices(int arr[], int l, int r, int num) 
 {
     int m;
