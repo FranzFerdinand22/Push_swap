@@ -51,6 +51,7 @@ void free_arr(char **arr)
     free(arr);
 }
 
+// checking duplicate number from stdin -> boolen
 int check_dup(t_stack *stack_A)
 {
     t_stack *tmp;
