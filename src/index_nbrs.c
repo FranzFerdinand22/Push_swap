@@ -12,7 +12,7 @@
 
 #include "push_swap.h"
 
-// merging two subarrays L and R into a single sorted array
+/*// merging two subarrays L and R into a single sorted array
 void	merge(int L[], int R[], int arr[], int nL, int nR)
 {
 	int		i;
@@ -62,6 +62,30 @@ void	merge_sort(int arr[], int size)
 	merge_sort(left_arr, mid);
 	merge_sort(right_arr, size - mid);
 	merge(left_arr, right_arr, arr, mid, size - mid);
+}*/
+
+// sort numbers in array 
+void    bubble_sort(int arr[], int n)
+{
+    int i = 0;
+    int k = 1;
+    int temp = 0;
+
+    while (k < n)
+    {
+        i = 0;
+        while (i < n - 1)
+        {
+            if (arr[i] > arr[i + 1])
+            {
+                temp = arr[i];
+                arr[i] = arr[i + 1];
+                arr[i + 1] = temp;
+            }
+            i++;
+        }
+        k++;
+    }
 }
 
 // Binary Search -> find the index of element in a sorted array
@@ -122,7 +146,7 @@ void	index_nbrs(t_stack *stack_A)
 		copy[i] = input[i];
 		i++;
 	}
-	merge_sort(copy, size);
+	bubble_sort(copy, size);
 	i = 0;
 	while (i < size)
 	{
