@@ -6,7 +6,7 @@
 /*   By: fptacek <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/21 15:16:03 by fptacek           #+#    #+#             */
-/*   Updated: 2023/07/24 20:56:29 by fptacek          ###   ########.fr       */
+/*   Updated: 2023/07/25 18:59:30 by fptacek          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,13 @@
 # include <stdio.h>
 # include <limits.h>
 
+typedef struct _stack	t_stack;
+
 typedef struct _stack
 {
-	long long int	num;
-	int		index;
-	struct _stack	*next;
+	long long int		num;
+	int					index;
+	t_stack				*next;
 }	t_stack;
 
 //ft_pritf
@@ -66,7 +68,7 @@ void	print_indexs(t_stack *stack);
 //void	merge(int L[], int R[], int arr[], int nL, int nR);
 void	radix_sort(t_stack **stack_A, t_stack **stack_B);
 void	bitwise_part(t_stack **stack_A, t_stack **stack_B, int max_bits);
-void    bubble_sort(int arr[], int n);
+void	bubble_sort(int arr[], int n);
 
 // operations a
 void	pa(t_stack **stack_A, t_stack **stack_B, int i);

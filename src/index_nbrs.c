@@ -6,7 +6,7 @@
 /*   By: fptacek <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/23 13:54:38 by fptacek           #+#    #+#             */
-/*   Updated: 2023/07/24 19:55:54 by fptacek          ###   ########.fr       */
+/*   Updated: 2023/07/25 18:38:10 by fptacek          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,27 +65,30 @@ void	merge_sort(int arr[], int size)
 }*/
 
 // sort numbers in array 
-void    bubble_sort(int arr[], int n)
+void	bubble_sort(int arr[], int n)
 {
-    int i = 0;
-    int k = 1;
-    int temp = 0;
+	int	i;
+	int	k;
+	int	temp;
 
-    while (k < n)
-    {
-        i = 0;
-        while (i < n - 1)
-        {
-            if (arr[i] > arr[i + 1])
-            {
-                temp = arr[i];
-                arr[i] = arr[i + 1];
-                arr[i + 1] = temp;
-            }
-            i++;
-        }
-        k++;
-    }
+	i = 0;
+	k = 1;
+	temp = 0;
+	while (k < n)
+	{
+		i = 0;
+		while (i < n - 1)
+		{
+			if (arr[i] > arr[i + 1])
+			{
+				temp = arr[i];
+				arr[i] = arr[i + 1];
+				arr[i + 1] = temp;
+			}
+			i++;
+		}
+		k++;
+	}
 }
 
 // Binary Search -> find the index of element in a sorted array
